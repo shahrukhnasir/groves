@@ -1,0 +1,31 @@
+.GeneralButton> button{
+    background: #B79252;
+    color: white;
+    width: 150px;
+    height: 50px;
+    border-radius: 15px;
+    border: none;
+    font-family: var(--main-font-regular); 
+    font-size: 13px;
+    transform: translateY(0rem);
+    transition: all 0.3s ease-in-out;
+}
+.arrow{
+    padding: 0px 0px 0px 50px;
+}
+.arrow_inner{
+    font-size: 20px !important;
+}
+
+.GeneralButton> button:hover{
+    background: white;
+    color: #B79252;
+    border: 1px solid  #B79252 !important;
+    width: 150px;
+    height: 50px;
+    border-radius: 15px;
+    border: none;
+    font-family: var(--main-font-regular); 
+    font-size: 13px;
+    transition: all 0.3s ease-in-out;
+}
