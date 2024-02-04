@@ -5,36 +5,14 @@ import { IoMdCart } from "react-icons/io";
 import Link from "next/link";
 import CommanButton from "../../Componets/CommanButton/CommanButton";
 import { useRouter } from "next/router";
-import { FaSearch } from "react-icons/fa";
+import { FaInstagramSquare, FaSnapchatGhost, FaTiktok } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 
 const SideMenu = () => {
   const router = useRouter();
 
   const [active, setActive] = useState(false);
-  const [dropDown, setDropDown] = useState(false);
-  const [search, setsearch] = useState(false);
-  const [menu, setMenu] = useState(false);
-
-  const searchHandler = () => {
-    setsearch(true);
-  };
-  const dropDownHandler = () => {
-    setDropDown(!dropDown);
-  };
-  const btn = (
-    <>
-      <div className={styles?.btnText}>Patient Portal </div>
-      <div className={styles?.extraText}>John Doe</div>
-    </>
-  );
-  const btn2 = (
-    <>
-      <div className={styles?.btnText}>Book an</div>
-      <div className={styles?.extraText}>Appointment</div>
-    </>
-  );
-
   const [canvas, setCanvas] = useState(false);
 
   const navigateHandler = (e, urlPath) => {
@@ -51,7 +29,7 @@ const SideMenu = () => {
             <Link href="/" onClick={(e) => navigateHandler(e, "/")}>
               {" "}
               <img
-                src="./images/elysion-white-logo.png"
+                src="./images/Groves_logo.png"
                 alt="logo"
                 className={styles.img}
               />
@@ -59,26 +37,9 @@ const SideMenu = () => {
 
             <div className="row">
               <div className="col my-auto">
-                {/* <Link
-                  href="/my-cart"
-                  onClick={(e) => navigateHandler(e, "/my-cart")}
-                >
-                  <div className={styles.cartIconSec}>
-                    <div className={styles.cartPoint}>2</div>
-                    <IoMdCart className={styles.cart} />
-                  </div>
-                </Link> */}
+               
               </div>
-              <div className="col">
-                <Link href="">
-                  <FaSearch
-                    className={styles?.searchIcon}
-                    onClick={searchHandler}
-                    data-bs-toggle="modal"
-                    data-bs-target="#exampleModal1"
-                  />
-                </Link>
-              </div>
+             
             </div>
 
             <div onClick={() => setCanvas(true)}>
@@ -91,11 +52,11 @@ const SideMenu = () => {
         {/* {/ Mobile Header Start Here /} */}
         <div className={canvas ? "mobileheader active" : "mobileheader"}>
           <Link href="/" onClick={(e) => navigateHandler(e, "/")}>
-            <div className="logo-box">
+            <div className={styles.logoBox}>
               <img
-                src="./images/elysion-white-logo.png"
+                src="/images/Groves_logo.png"
                 alt="logo"
-                className={styles.img}
+                className={styles.logoBox}
               />
             </div>
           </Link>
@@ -116,407 +77,81 @@ const SideMenu = () => {
                 </button>
               </div>
               <ul className="menus">
+               
+              
+              
                 <li className="menu-items">
                   <Link
-                    href="/"
+                    href=""
                     className="menu-link"
-                    onClick={(e) => navigateHandler(e, "/")}
                   >
-                    Home
+                   Dine with us
                   </Link>
                 </li>
                 <li className="menu-items">
-                  <div class="accordion" id="accordionExample">
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingTwo">
-                        <button
-                          class="accordion-button collapsed"
-                          type="button"
-                          data-bs-toggle="collapse"
-                          data-bs-target="#collapseTwo"
-                          aria-expanded="true"
-                          aria-controls="collapseTwo"
-                        >
-                          Services
-                        </button>
-                      </h2>
-                      <div
-                        id="collapseTwo"
-                        class="accordion-collapse collapse"
-                        aria-labelledby="headingTwo"
-                        data-bs-parent="#accordionExample"
-                      >
-                        <div class="accordion-body">
-                          <ul className="menus">
-                            <li className="menu-items">
-                              <Link
-                                href={`/Internal-Integrative-medicine`}
-                                className="menu-link"
-                                onClick={(e) =>
-                                  navigateHandler(e, "/Internal-Integrative-medicine")
-                                }
-                              >
-                                Internal And Integrative Medicine
-                              </Link>
-                            </li>
-                            <li className="menu-items">
-                              <Link
-                                href={`/functional-medicine`}
-                                className="menu-link"
-                                onClick={(e) =>
-                                  navigateHandler(e, "/functional-medicine")
-                                }
-                              >
-                                Functional Medicine
-                              </Link>
-                            </li>
-                            <li className="menu-items">
-                              <Link
-                                href={`/women-wellness`}
-                                className="menu-link"
-                                onClick={(e) =>
-                                  navigateHandler(e, "/women-wellness")
-                                }
-                              >
-                               Women’s Wellness
-                              </Link>
-                            </li>
-                            <li className="menu-items">
-                              <Link
-                                href={`/hormone-bioidentical-treatment`}
-                                className="menu-link"
-                                onClick={(e) =>
-                                  navigateHandler(e, "/hormone-bioidentical-treatment")
-                                }
-                              >
-                                Hormone Balance And Bioidentical Treatment
-                              </Link>
-                            </li>
-                            <li className="menu-items">
-                              <Link
-                                href={`/menopause-treatment`}
-                                className="menu-link"
-                                onClick={(e) =>
-                                  navigateHandler(e, "/menopause-treatment")
-                                }
-                              >
-                               Menopause And Perimenopausal Treatment
-
-                              </Link>
-                            </li>
-                            <li className="menu-items">
-                              <Link
-                                href={`/addiction-medicine`}
-                                className="menu-link"
-                                onClick={(e) =>
-                                  navigateHandler(e, "/addiction-medicine")
-                                }
-                              >
-                                Addiction Medicine
-                              </Link>
-                            </li>
-                            <li className="menu-items">
-                              <Link
-                                href={`/weight-loss-management`}
-                                className="menu-link"
-                                onClick={(e) =>
-                                  navigateHandler(e, "/weight-loss-management")
-                                }
-                              >
-                               Weight Loss Management
-
-                              </Link>
-                            </li>
-                            <li className="menu-items">
-                              <Link
-                                href={`/weight-management`}
-                                className="menu-link"
-                                onClick={(e) =>
-                                  navigateHandler(e, "/weight-management")
-                                }
-                              >
-                                GLP-1 Weight Management
-                              </Link>
-                            </li>
-                            <li className="menu-items">
-                              <Link
-                                href={`/iv-hydration-therapy`}
-                                className="menu-link"
-                                onClick={(e) =>
-                                  navigateHandler(e, "/iv-hydration-therapy")
-                                }
-                              >
-                                {" "}
-                                IV Hydration & Vitamin Therapy
-                              </Link>
-                            </li>
-
-                            <li className="menu-items">
-                              <Link
-                                href={`/botox-filler`}
-                                className="menu-link"
-                                onClick={(e) =>
-                                  navigateHandler(e, "/botox-filler")
-                                }
-                              >
-                                {" "}
-                                Botox, Dysport, Jeuveau & Fillers
-
-                              </Link>
-                            </li>
-                            <li className="menu-items">
-                              <Link
-                                href="/service"
-                                className="menu-link"
-                                onClick={(e) => navigateHandler(e, "/service")}
-                              >
-                                View All
-                              </Link>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li className="menu-items">
-                  <div class="accordion" id="accordionExample">
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingThree">
-                        <button
-                          class="accordion-button collapsed"
-                          type="button"
-                          data-bs-toggle="collapse"
-                          data-bs-target="#collapseThree"
-                          aria-expanded="false"
-                          aria-controls="collapseThree"
-                        >
-                          Patient resources
-                        </button>
-                      </h2>
-                      <div
-                        id="collapseThree"
-                        class="accordion-collapse collapse"
-                        aria-labelledby="headingThree"
-                        data-bs-parent="#accordionExample"
-                      >
-                        <div class="accordion-body">
-                          <ul className="menus">
-                            <li className="menu-items">
-                              <Link href="/patient-form" className="menu-link" onClick={(e) =>
-                                navigateHandler(e, "/patient-form")
-                              }>
-                                Patient forms
-                              </Link>
-                            </li>
-                            <li className="menu-items">
-                              <Link
-                                href="/patient-education"
-                                className="menu-link"
-                                onClick={(e) =>
-                                  navigateHandler(e, "/patient-education")
-                                }
-                              >
-                                Patient Education
-                              </Link>
-                            </li>
-                            <li className="menu-items">
-                              <Link
-                                href="/insurance"
-                                className="menu-link"
-                                onClick={(e) =>
-                                  navigateHandler(e, "/insurance")
-                                }
-                              >
-                                Insurance
-                              </Link>
-                            </li>
-                            <li className="menu-items">
-                              <Link
-                                href="/billing"
-                                className="menu-link"
-                                onClick={(e) => navigateHandler(e, "/billing")}
-                              >
-                                Billing
-                              </Link>
-                            </li>
-                            <li className="menu-items">
-                              <Link
-                                href="/register"
-                                className="menu-link"
-                                onClick={(e) => navigateHandler(e, "/register")}
-                              >
-                                Patient portal
-                              </Link>
-                            </li>
-                            <li className="menu-items">
-                              <Link
-                                href="/faq"
-                                className="menu-link"
-                                onClick={(e) => navigateHandler(e, "/faq")}
-                              >
-                                FAQ's
-                              </Link>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li className="menu-items">
                   <Link
-                    href="/membership"
+                    href=""
                     className="menu-link"
-                    onClick={(e) => navigateHandler(e, "/membership")}
                   >
-                    Membership
-                  </Link>
-                </li>
-                <li className="menu-items">
-                  <Link
-                    href="https://us.fullscript.com/welcome/elysionhealth/signup?utm_medium=webreferral&utm_source=other&utm_campaign=abmwebbuttons_dark_200x200.svg&signup_source=website_buttons"
-                    className="menu-link"
-                    onClick={(e) => navigateHandler(e, "https://us.fullscript.com/welcome/elysionhealth/signup?utm_medium=webreferral&utm_source=other&utm_campaign=abmwebbuttons_dark_200x200.svg&signup_source=website_buttons")}
-                  >
-                    Shop
-                  </Link>
-                </li>
-
-                <li className="menu-items">
-                  <div class="accordion" id="accordionExample">
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingFour">
-                        <button
-                          class="accordion-button collapsed"
-                          type="button"
-                          data-bs-toggle="collapse"
-                          data-bs-target="#collapseFour"
-                          aria-expanded="false"
-                          aria-controls="collapseFour"
-                        >
-                          Learn
-                        </button>
-                      </h2>
-                      <div
-                        id="collapseFour"
-                        class="accordion-collapse collapse"
-                        aria-labelledby="headingFour"
-                        data-bs-parent="#accordionExample"
-                      >
-                        <div class="accordion-body">
-                          <ul className="menus">
-                            <li className="menu-items">
-                              <Link
-                                href="/blogs"
-                                className="menu-link"
-                                onClick={(e) => navigateHandler(e, "/blogs")}
-                              >
-                                Blogs
-                              </Link>
-                            </li>
-                            <li className="menu-items">
-                              <Link
-                                href="/office-policy"
-                                className="menu-link"
-                                onClick={(e) => navigateHandler(e, "/office-policy")}
-                              >
-                                Office Policy
-                              </Link>
-                            </li>
-                            {/* <li className="menu-items">
-                              <Link
-                                href="/health-topics"
-                                className="menu-link"
-                                onClick={(e) =>
-                                  navigateHandler(e, "/health-topics")
-                                }
-                              >
-                                Health Topics
-                              </Link>
-                            </li> */}
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li className="menu-items">
-                  <Link
-                    href="/about-us"
-                    className="menu-link"
-                    onClick={(e) => navigateHandler(e, "/about-us")}
-                  >
-                    About Us
-                  </Link>
-                </li>
-                <li className="menu-items">
-                  <Link
-                    href="/contact-us"
-                    className="menu-link"
-                    onClick={(e) => navigateHandler(e, "/contact-us")}
-                  >
-                    Contact Us
+                   play your visit
                   </Link>
                 </li>
 
                 <li className="menu-items">
                   <Link
-                    href="/register"
-                    onClick={(e) => navigateHandler(e, "/register")}
+                    href=""
+                    className="menu-link"
                   >
-                    <CommanButton label="Patient Portal" />
+                   events
                   </Link>
                 </li>
                 <li className="menu-items">
-                  <Link href="/book-on-appointment">
-                    <CommanButton
-                      className={styles?.bookNow}
-                      // className={styles.portalBtn}
-                      label="Free Consultation"
-                    />
+                  <Link
+                    href=""
+                    className="menu-link"
+                  >
+                   view groves map
                   </Link>
                 </li>
+
+                <li className="menu-items">
+                  <Link
+                    href=""
+                    className="menu-link"
+                  >
+                   our story
+                  </Link>
+                </li>
+                <li className="menu-items">
+                  <Link
+                    href=""
+                    className="menu-link"
+                  >
+                   contact us
+                  </Link>
+                </li>
+
+                <li className="menu-items">
+                  <Link
+                    href=""
+                  >
+                    <CommanButton label="Login" />
+                  </Link>
+                </li>
+                
               </ul>
+              <ul className={styles?.TopLinks}>
+            <li> <FaTiktok className={styles?.social_icon} /></li>
+            <li> <FaInstagramSquare className={styles?.social_icon} /> </li>
+            <li> <FaXTwitter className={styles?.social_icon}/> </li>
+            <li><FaSnapchatGhost className={styles?.social_icon} /></li>
+          </ul>
             </div>
           </div>
         </div>
         {/* {/ Mobile Header End Here /} */}
       </div>
-      {!search == true ? (
-        ""
-      ) : (
-        <div
-          class="modal fade"
-          id="exampleModal1"
-          tabindex="-1"
-          aria-labelledby="exampleModalLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">
-                  <img src="/images/logo.svg" alt="Picture of the author" />
-                </h1>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="modal-body">
-                <input
-                  type="text"
-                  placeholder="Search..."
-                  className={styles.inputField}
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
+    
       {/* side menu end  */}
     </>
   );

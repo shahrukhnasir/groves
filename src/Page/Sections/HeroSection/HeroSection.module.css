@@ -2,7 +2,6 @@
 	height: 730px;
 	width: 100% !important;
 	background-image: url("../../../../public/images/bannerGroves.webp");
-	/* background-image: url("../../../../public/images/herosection/FInal_landing.webp"); */
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -131,16 +130,6 @@
 		color: #ffffffff !important;
 
 	}
-
-	#mainHeroContainer {
-		background: url("../../../../public/images/herosection/mobile-hero-img.webp");
-		width: 100% !important;
-		height: 500px;
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
-		position: relative;
-	}
 	.mainHeading div {
 		text-align: start !important;
 	}
@@ -200,15 +189,6 @@
 
 	}
 
-	#mainHeroContainer {
-		background: url("../../../../public/images/herosection/mobile-hero-img.webp");
-		width: 100% !important;
-		height: 500px;
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
-		position: relative;
-	}
 	.mainHeading div {
 		text-align: start !important;
 	}
@@ -271,16 +251,6 @@
 		color: #ffffffff !important;
 
 	}
-
-	/* #mainHeroContainer {
-		background: url("../../../../public/images/herosection/mobile-hero-img.webp");
-		width: 100% !important;
-		height: 500px;
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
-		position: relative;
-	} */
 	.mainHeading div {
 		text-align: start !important;
 	}
@@ -341,15 +311,7 @@
 
 	}
 
-	/* #mainHeroContainer {
-		background: url("../../../../public/images/herosection/tablet-hero-img.webp");
-		width: 100% !important;
-		height: 500px;
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
-		position: relative;
-	} */
+	
 	.mainHeading div {
 		text-align: start !important;
 	}
@@ -403,14 +365,7 @@
 		font-family: var(--main-font-regular);
 		font-size: 28px !important;
 	}
-	/* #mainHeroContainer {
-		height: 600px !important;
-		width: 100% !important;
-		background-image: url("../../../../public/images/herosection/Elysion_landing_page.webp");
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
-	} */
+
 	.heroSectionImage {
 		width: 109% !important;
 	}
@@ -435,14 +390,7 @@
 	.heroSectionImage {
 		width: 109% !important;
 	}
-	/* #mainHeroContainer {
-		height: 600px !important;
-		width: 100% !important;
-		background-image: url("../../../../public/images/herosection/Elysion_landing_page.webp");
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
-	} */
+	
 }
 
 @media (min-width: 1100px) and (max-width: 1400px) {

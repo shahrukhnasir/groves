@@ -1,14 +1,13 @@
 .footerContainer {
-  background-color: #1c3247;
+  background-color:  rgb(38, 51, 6);
+  background: linear-gradient(86deg, rgba(38, 51, 6, 1) 51%, rgba(18, 25, 1, 1) 100%);
 }
 .decs {
   font-family:"Poppins-Regular" !important;
-  font-size: 14px;
+  font-size: 30px;
   color: #F3F2EE;
-  padding-top: 20px;
   text-align: start;
   word-wrap: break-word;
-  max-width: 300px;
 }
 
 .QuikHeading {
@@ -28,26 +27,9 @@
   font-family: "Poppins-Regular" !important;
   font-size: 14px !important;
 }
-.footerLink:hover {
-  color: #45B5C7 ;
-  font-family: "Poppins-Regular" !important;
-  
-}
 
-
-.inputField {
-  border-radius: 51px;
-  padding: 12px 20px;
-  border: 2px solid #1c3247;
-  font-family: "Poppins-Regular" !important;
-  color: #9d9d9d;
-  font-size: 14px;
-  width: 97%;
-  margin-bottom: 15px;
-}
 .firstSection {
-  margin: 0px 0px 0px 37px;
-  max-width: 250px;
+  margin: 0px 0px 0px 0px;
 }
 .secoundSection {
   padding: 50px 0px 0px 0px;

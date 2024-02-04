@@ -81,7 +81,7 @@ const HorizontalMenu = () => {
 
   return (
     <>
-      <div id={styles?.topMenuBarContainer}>
+      <div id={styles?.topMenuBarContainer} >
         <nav className="navbar navbar-expand-lg py-0" id={styles?.topHeader}>
           <div className="container p-0">
             <button
@@ -108,34 +108,34 @@ const HorizontalMenu = () => {
               >
                 <li className="nav-item" id={styles?.navItem}>
                   <Link className="nav-link" href="/">
-                    Dine with usS
+                    Dine with us
                   </Link>
                 </li>
                 
               
                 <li className="nav-item" id={styles?.navItem}>
-                  <Link className="nav-link" href="/membership">
+                  <Link className="nav-link" href="">
                     play your visit
                   </Link>
                 </li>
                 <li className="nav-item" id={styles?.navItem}>
-                  <Link className="nav-link" href="/membership">
+                  <Link className="nav-link" href="">
                     events
                   </Link>
                 </li>
 
                 <li className="nav-item" id={styles?.navItem}>
-                  <Link className="nav-link" href="/membership">
+                  <Link className="nav-link" href="">
                     view groves map
                   </Link>
                 </li>
                 <li className="nav-item" id={styles?.navItem}>
-                  <Link className="nav-link" href="/membership">
+                  <Link className="nav-link" href="">
                     our story
                   </Link>
                 </li>
                 <li className="nav-item" id={styles?.navItem}>
-                  <Link className="nav-link" href="/membership">
+                  <Link className="nav-link" href="">
                     contact us
                   </Link>
                 </li>
@@ -147,40 +147,7 @@ const HorizontalMenu = () => {
           </div>
         </nav>
 
-        {!search == true ? (
-          ""
-        ) : (
-          <div
-            class="modal fade"
-            id="exampleModal1"
-            tabindex="-1"
-            aria-labelledby="exampleModalLabel"
-            aria-hidden="true"
-          >
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">
-                    <img src="/images/logo.svg" alt="Picture of the author" />
-                  </h1>
-                  <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
-                  ></button>
-                </div>
-                <div class="modal-body">
-                  <input
-                    type="text"
-                    placeholder="Search..."
-                    className={styles.inputField}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
+       
       </div>
     </>
   );
