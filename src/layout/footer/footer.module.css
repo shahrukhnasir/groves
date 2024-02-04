@@ -66,13 +66,6 @@
   transition: all 1s;
 }
 
-.line {
-  color: #F3F2EE;
-  border: -2.1rem solid #F3F2EE;
-  opacity: 1;
-  margin-left: 37px;
-}
-
 .copyRight {
   font-size: 11px;
   font-family: var(--main-font-regular);
@@ -88,15 +81,25 @@
   margin-bottom: 10px;
 }
 .icon {
-  color: #1c3247;
-  font-size: 19px;
+  color: #F3F2EE !important;;
+  font-size: 25px;
   padding: 0px 0px 2px 6px;
 }
+.TopLinks
+
+{
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none  ;
+ 
+  
+}
 .iconsSection {
+  list-style: none !important; 
   display: flex;
   flex-direction: column;
   list-style: none;
-  padding: 140px 0px 0px 0px;
+  padding: 40px 0px 0px 0px;
 }
 .warning {
   font-family: var(--main-font-regular);
